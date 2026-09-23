@@ -62,4 +62,10 @@ public class Dealer {
 	    Random random = new Random();
 	    return random.nextInt(maximo + 1); // nextInt es exclusivo del límite superior, por eso +1
 	}
+	public Carta entregarCarta() {
+	    int posicion = generarAleatorio(naipe.size() - 1);
+	    Carta cartaElegida = naipe.get(posicion);
+	    naipe.remove(posicion);
+	    return cartaElegida;
+	}
 }
