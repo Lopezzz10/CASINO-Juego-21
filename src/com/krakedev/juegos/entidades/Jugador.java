@@ -6,6 +6,7 @@ public class Jugador {
 
 	private String nickname;
 	private ArrayList<Carta> cartas = new ArrayList<>();
+	private int puntajeCartas;
 
 	public String getNickname() {
 		return nickname;
@@ -23,13 +24,22 @@ public class Jugador {
 		this.cartas = cartas;
 	}
 
+	public int getPuntajeCartas() {
+		return puntajeCartas;
+	}
+
+	public void setPuntajeCartas(int puntajeCartas) {
+		this.puntajeCartas = puntajeCartas;
+	}
+
 	public void recibirCarta(Carta carta) {
 		this.cartas.add(carta);
 	}
+
 	public void imprimir() {
-	    System.out.println("Jugador: " + nickname);
-	    for (Carta carta : cartas) {
-	        carta.imprimir();
-	    }
+		System.out.println("Jugador: " + nickname);
+		for (Carta carta : cartas) {
+			carta.imprimir();
+		}
 	}
 }
