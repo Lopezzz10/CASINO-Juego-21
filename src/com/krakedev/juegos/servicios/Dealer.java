@@ -1,6 +1,7 @@
 package com.krakedev.juegos.servicios;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import com.krakedev.juegos.entidades.Carta;
 
@@ -56,5 +57,9 @@ public class Dealer {
 	    for (Carta carta : naipe) {
 	        carta.imprimir();
 	    }
+	}
+	public int generarAleatorio(int maximo) {
+	    Random random = new Random();
+	    return random.nextInt(maximo + 1); // nextInt es exclusivo del límite superior, por eso +1
 	}
 }
